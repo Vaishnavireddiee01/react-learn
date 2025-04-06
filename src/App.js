@@ -8,10 +8,14 @@ import Message from './Component/Message'
 import Counter from './Component/Counter'
 import FunctionClick from './Component/FunctionClick'
 import ClassClick from './Component/ClassClick'
+import EventBind from './Component/EventBind'
+
 class App extends Component {
   render() {
     return(
       <div className="App">
+        {/*Binding Events*/}
+        <EventBind/>
         {/*handle user interaction*/}
         <FunctionClick/>
         <ClassClick/>
