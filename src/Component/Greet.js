@@ -1,3 +1,5 @@
+//functional components
+
 import React from 'react'
 
 // ction Greet(){
@@ -6,5 +8,5 @@ import React from 'react'
 //  )
 //
 
-export const Greet = () => <h1> Hello AvR</h1>
-//port default Greet;
+const Greet = () => <h1> Hello AvR</h1>
+export default Greet
