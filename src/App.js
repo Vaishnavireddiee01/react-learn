@@ -5,11 +5,14 @@ import './App.css';
 import Greet from './Component/Greet'
 import Welcome from './Component/Welcome'
 import Message from './Component/Message'
+import Counter from './Component/Counter'
+
+
 class App extends Component {
   render() {
     return(
       <div className="App">
-
+        <Counter/>
         {/*using States*/}
         <Message/>
         {/*using props*/}
