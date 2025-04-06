@@ -8,8 +8,16 @@ class App extends Component {
   render() {
     return(
       <div className="App">
-        <Greet />
-        <Welcome />
+        {/*using props*/}
+
+        <Greet name="AVR" age="20">
+          <p> this is children props</p>
+        </Greet>
+        <Greet name="Sita" age="21">
+          <button>Click Me</button>
+        </Greet>
+        <Welcome name="AVR" age="20"/>
+        <Welcome name="Sita" age="21"/>
       </div>
     )
   }
