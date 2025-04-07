@@ -45,3 +45,28 @@ children components lifecycle methods are also executed.
 4. componentDidMount() - this method called only once in the entire lifecycle of the component. It is called after the component has been rendered to the DOM.
 
 it cause side effects. Ex: interact with the DOM or perform HTTP requests, API calls, etc. ajax calls to load data
+
+
+Updating Lifecycle methods:
+
+1. static getDerivedStateFromProps(props, state): This method is called right before rendering each component(method is called everytime a component is re-rendered)
+
+it is used to set the state. it is used when the state depends on the props of the component.
+do not cause side effects. Ex: HTTP requests, API calls, DOM manipulation, etc.
+
+shouldComponentUpdate(nextProps, nextState): This method is called before rendering each component. It is used to determine whether the component should be re-rendered or not.
+this method is for performance optimization. it is called before every render. it is used to prevent unnecessary re-renders.
+
+do not cause side effects. Ex: HTTP requests, API calls, DOM manipulation, etc., 
+calling the setState method.
+
+3. render() - only required method in class component. It is called after every render. It is responsible for returning the JSX that will be rendered to the DOM. it reads props and state and returns JSX which describes UI. it is the only method that is called after every render.
+
+4. getSnapshotBeforeUpdate(prevProps, prevState): This method is called right before the component is re-render. 
+It is used to capture some information from the DOM before the component is updated.
+It is called before every update. it is used to prevent unnecessary re-renders.
+capture some information from the DOM before the component is updated.
+
+this method will return null or return a value.Returned value will be passed as the third parameter to the next method.
+
+5. componentDidUpdate(prevProps, prevState, snapshot): This method is called after the component has been updated. It is called after the render is finished in the re-render cycles.
