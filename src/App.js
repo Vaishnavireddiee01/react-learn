@@ -18,10 +18,15 @@ import './appStyles.css'
 import styles from './appStyles.module.css'
 import './App.css'
 import Form from './Component/Form'
+import LifecycleA from './Component/LifecycleA'
+
 class App extends Component {
   render() {
     return(
       <div className="App">
+
+        {/*using lifecycle methods*/}
+        <LifecycleA/>
         {/*Forms*/}
 
         <Form/>

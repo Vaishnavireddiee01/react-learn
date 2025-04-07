@@ -1,0 +1,47 @@
+Life cycle methode : 4 types (exists only in class component not in functional component)
+
+1. Mounting - when an instance of a component is being created and inserted into the DOM of a web page.
+
+methods : constructor, static getDerivedStateFromProps, render, componentDidMount, additionals :UNSAFE_componentWillMount, UNSAFE_componentWill
+
+
+2. Updating - when a component's state or props change, and the component is re-rendered.
+
+methods : static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate, componentDidUpdate,
+
+3. Unmounting - when an instance of a component is being removed from the DOM of a web page.
+
+methods : componentWillUnmount, additionals : UNSAFE_componentWillUnmount, UNSAFE_componentWillUpdate, UNSAFE_componentWillMount,
+
+4. Error Handling - when there is an error in the component tree, React will catch the error and display a warning in the console.
+
+
+methods : static getDerivedStateFromProps,
+ComponentDidCatch  additionals : UNSAFE_componentWillMount, UNSAFE_componentWillReceiveProps, UNSAFE
+
+
+
+1. mounting Lifecycle methods:
+- constructor(props): A special function  Called when the component is initialized/created.
+It is perfect for Initialising state and binding methods to the component's context.(binding the event handlers)
+
+note: do not cause side effects in constructor, it is not allowed. Ex: HTTP requests, API calls, DOM manipulation, etc.
+
+super(props) - this will call the parent(base) class's constructor and pass the props to it. It directly overwrite this.state.(only place to change the state)
+
+
+- static getDerivedStateFromProps(props, state): This method is called right before rendering each component(used when the state of the component depends on changes in the props over time).
+
+used to set the state of the component based on the props. It is called after every render. 
+
+note : donot cause side effects in this method, it is not allowed. Ex: HTTP requests, API calls, DOM manipulation,
+
+3. render() = only required method in class component. It is called after every render. It is responsible for returning the JSX that will be rendered to the DOM. it reads props and state and returns JSX which describes UI. it is the only method that is called after every render.
+
+note : do not change state or interact with DOM or make ajax calls
+
+children components lifecycle methods are also executed.
+
+4. componentDidMount() - this method called only once in the entire lifecycle of the component. It is called after the component has been rendered to the DOM.
+
+it cause side effects. Ex: interact with the DOM or perform HTTP requests, API calls, etc. ajax calls to load data
