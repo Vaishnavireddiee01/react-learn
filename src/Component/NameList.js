@@ -2,7 +2,10 @@ import React from 'react'
 import Person from './Person'
 
 function NameList() {
-   {/* const names=['Bruce', 'Clark', 'Diana'] */}
+    // const names = ['Bruce', 'Clark', 'Diana']
+    // const nameList = names.map((name, index) => <h2 key={index}>{index} {name}</h2>)
+    // return <div>{nameList}</div>
+    //using objects in lists
 
    const persons = [
         {
@@ -24,13 +27,9 @@ function NameList() {
             skill: 'Vue'
         }
     ]
-    const personList=persons.map(person => <Person person={person}/>)
+    const personList=persons.map(person => <Person key={person.id} person={person}/>)
   return (
-    <div>
-        
-        {personList}
-        
-    </div>
+    <div>{personList}</div>
   )
 }
 
