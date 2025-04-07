@@ -16,11 +16,15 @@ import Stylesheet from './Component/Stylesheet';
 import Inline from './Component/Inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
-
+import './App.css'
+import Form from './Component/Form'
 class App extends Component {
   render() {
     return(
       <div className="App">
+        {/*Forms*/}
+
+        <Form/>
 
         <h1 className='error'>Error</h1>
         <h1 className={styles.success}>Success</h1>
