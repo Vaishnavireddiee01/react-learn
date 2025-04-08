@@ -21,11 +21,15 @@ import Form from './Component/Form'
 import LifecycleA from './Component/LifecycleA'
 import FragmentDemo from './Component/FragmentDemo'
 import Table from './Component/Table'
+import ParentComp from './Component/ParentComp';
 
 class App extends Component {
   render() {
     return(
       <div className="App">
+        {/*working on pure components*/}
+        <ParentComp />
+      
         {/*using fragments*/}
         <FragmentDemo/>
         <Table/>

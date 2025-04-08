@@ -1,0 +1,24 @@
+Regular Component : A regular Component does not implement shouldComponentUpdate method. It always return true by default
+
+Pure Component : A pure Component implements shouldComponentUpdate method. It returns true only with a shallow props or state comparison.
+
+SC of prevState with currentState
+                                    =>  differnce=> re-render component
+SC of prevProps with currentProps  
+
+why use(pure components) : this prevents unnecessary re-renders of components when props or state change. It boosts performance.
+
+shallow comparison means:
+Primitive Types:
+a (SC) b returns true if a and b have the same value
+and are of same data Type
+eg : string 'AVR'(SC) string 'AVR' returns true
+
+Complex types:
+a (SC) b returns true if a and b have the same reference(object)
+
+eg: var a={1,2,3};
+var b={1,2,3};
+var c=a;
+var ab_eq=(a==b) // returns false
+var ac_eq=(a==c) // returns true
