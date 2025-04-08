@@ -19,11 +19,17 @@ import styles from './appStyles.module.css'
 import './App.css'
 import Form from './Component/Form'
 import LifecycleA from './Component/LifecycleA'
+import FragmentDemo from './Component/FragmentDemo'
+import Table from './Component/Table'
 
 class App extends Component {
   render() {
     return(
       <div className="App">
+        {/*using fragments*/}
+        <FragmentDemo/>
+        <Table/>
+        
 
         {/*using lifecycle methods*/}
         <LifecycleA/>
