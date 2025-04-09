@@ -23,12 +23,16 @@ import FragmentDemo from './Component/FragmentDemo'
 import Table from './Component/Table'
 import ParentComp from './Component/ParentComp';
 import RefsDemo from './Component/RefsDemo';
+import FocusInput from './Component/FocusInput'
 class App extends Component {
   render() {
     return(
       <div className="App">
+
         {/*using refs*/}
         <RefsDemo/>
+        {/*using refs with class components*/}
+        <FocusInput/>
         {/*working on pure components*/}
         <ParentComp />
       
