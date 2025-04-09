@@ -1,0 +1,6 @@
+Context- context provides a way to pass data between components. It is a global object that can be accessed from any component.( it is a way to pass data through the component tree without having to pass props down manually at every level.)
+
+steps:
+1. create context
+2. provide a context value
+3. consume the context value

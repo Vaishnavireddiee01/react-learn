@@ -25,11 +25,20 @@ import ParentComp from './Component/ParentComp';
 import RefsDemo from './Component/RefsDemo';
 import FocusInput from './Component/FocusInput'
 import FRParentInput from './Component/FRParentInput'
-
+import ComponentC from './Component/ComponentC'
+import { UserProvider } from './Component/userContext';
 class App extends Component {
   render() {
     return(
       <div className="App">
+
+        {/*implementing context*/}
+        <UserProvider value="AVR">
+          <ComponentC />
+        </UserProvider>
+        
+
+        {/*using forward refs*/}
         <FRParentInput/>
 
         {/*using refs*/}
