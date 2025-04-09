@@ -24,10 +24,13 @@ import Table from './Component/Table'
 import ParentComp from './Component/ParentComp';
 import RefsDemo from './Component/RefsDemo';
 import FocusInput from './Component/FocusInput'
+import FRParentInput from './Component/FRParentInput'
+
 class App extends Component {
   render() {
     return(
       <div className="App">
+        <FRParentInput/>
 
         {/*using refs*/}
         <RefsDemo/>
